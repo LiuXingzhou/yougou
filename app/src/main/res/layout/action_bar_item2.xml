@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/abar_padding"
+                android:paddingRight="@dimen/abar_padding">
+
+    <ImageButton
+        android:id="@+id/abar_back"
+        android:layout_width="@dimen/abr_back"
+        android:layout_height="@dimen/abr_back"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/menu"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/abar_padding"
+        android:layout_toLeftOf="@+id/abar_search"
+        android:layout_toRightOf="@id/abar_back"/>
+
+    <ImageButton
+        android:id="@id/abar_search"
+        android:layout_width="@dimen/abr_search"
+        android:layout_height="@dimen/abr_search"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/search"/>
+
+</RelativeLayout>

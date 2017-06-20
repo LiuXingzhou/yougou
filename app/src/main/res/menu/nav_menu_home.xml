@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/nav_menu_home_g1">
+        <item
+            android:id="@+id/nav_menu_home_collection"
+            android:title="我的收藏"/>
+        <item
+            android:id="@+id/nav_menu_home_news"
+            android:title="我的消息"/>
+        <item
+            android:id="@+id/nav_menu_home_coupon"
+            android:title="我的优惠券"/>
+        <item
+            android:id="@+id/nav_menu_home_refund"
+            android:title="退款/售后"/>
+        <item
+            android:id="@+id/nav_menu_home_address"
+            android:title="收货地址"/>
+        <item
+            android:id="@+id/nav_menu_home_setting"
+            android:title="设置"/>
+    </group>
+    <group android:id="@+id/nav_menu_home_g2">
+        <item
+            android:id="@+id/nav_menu_home_exit"
+            android:title="退出登录"/>
+    </group>
+
+</menu>
