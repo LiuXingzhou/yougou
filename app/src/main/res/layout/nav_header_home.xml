@@ -11,6 +11,7 @@
         android:orientation="horizontal">
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/nav_avert_img"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_margin="10dp"
@@ -24,6 +25,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/nav_avert_tv1"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -33,6 +35,7 @@
                 android:textSize="@dimen/text_size_3"/>
 
             <TextView
+                android:id="@+id/nav_avert_tv2"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -55,6 +58,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/nav_dai_f_k"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -75,6 +79,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/nav_dai_s_h"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -95,6 +100,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/nav_quan_b_d_d"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -127,6 +133,7 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/nav_ll1"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center_vertical"
@@ -179,6 +186,7 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/nav_ll2"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center_vertical"

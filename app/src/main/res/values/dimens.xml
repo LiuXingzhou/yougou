@@ -2,8 +2,8 @@
 <resources>
     <dimen name="abar_padding">10dp</dimen>
     <dimen name="abar_edit">5dp</dimen>
-    <dimen name="abr_back">40dp</dimen>
-    <dimen name="abr_search">35dp</dimen>
+    <dimen name="abr_back">50dp</dimen>
+    <dimen name="abr_search">50dp</dimen>
     <dimen name="float_btn_margin">50dp</dimen>
     <dimen name="text_size_1">22sp</dimen>
     <dimen name="text_size_2">20sp</dimen>
