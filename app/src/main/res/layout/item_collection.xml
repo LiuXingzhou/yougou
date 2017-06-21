@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="@dimen/main_margin"
+                android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/itco_iv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="@dimen/main_margin"
+        android:layout_marginRight="@dimen/main_margin"
+        android:src="@drawable/img1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_margin"
+        android:layout_toRightOf="@id/itco_iv"
+        android:text="时尚白色连衣裙 长袖小白裙"
+        android:textColor="@color/title_class_1"
+        android:textSize="@dimen/text_size_4"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_margin"
+        android:layout_toRightOf="@id/itco_iv"
+        android:text="时尚白色连衣裙 长袖小白裙"
+        android:textColor="@color/title_class_1"
+        android:textSize="@dimen/text_size_4"/>
+
+</RelativeLayout>

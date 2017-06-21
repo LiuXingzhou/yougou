@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="abar_padding">10dp</dimen>
+    <dimen name="abar_padding">5dp</dimen>
     <dimen name="abar_edit">5dp</dimen>
     <dimen name="abr_back">50dp</dimen>
     <dimen name="abr_search">50dp</dimen>
     <dimen name="float_btn_margin">50dp</dimen>
+    <dimen name="main_margin">20dp</dimen>
     <dimen name="text_size_1">22sp</dimen>
     <dimen name="text_size_2">20sp</dimen>
     <dimen name="text_size_3">16sp</dimen>
-    <dimen name="text_size_4">15sp</dimen>
+    <dimen name="text_size_4">14sp</dimen>
+    <dimen name="text_size_5">12sp</dimen>
+    <dimen name="text_size_6">10sp</dimen>
 </resources>

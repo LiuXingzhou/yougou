@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/fg_per_rl_img"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/main_margin"
+            android:text="修改头像"
+            android:textColor="@color/title_class_2"
+            android:textSize="@dimen/text_size_3"/>
+
+        <ImageView
+            android:id="@+id/fg_per_pre1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/pre"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/fg_per_avert_img"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/fg_per_pre1"
+            android:padding="4dp"
+            android:src="@drawable/avert"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fg_per_rl_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/main_margin"
+            android:text="修改昵称"
+            android:textColor="@color/title_class_2"
+            android:textSize="@dimen/text_size_3"/>
+
+        <ImageView
+            android:id="@+id/fg_per_pre2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/pre"/>
+
+        <TextView
+            android:id="@+id/fg_per_avert_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/fg_per_pre2"
+            android:padding="4dp"
+            android:text="风·清明"
+            android:textColor="@color/hint_text"
+            android:textSize="@dimen/text_size_3"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fg_per_rl_gender"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/main_margin"
+            android:text="性别"
+            android:textColor="@color/title_class_2"
+            android:textSize="@dimen/text_size_3"/>
+
+        <ImageView
+            android:id="@+id/fg_per_pre3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/pre"/>
+
+        <TextView
+            android:id="@+id/fg_per_avert_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/fg_per_pre3"
+            android:padding="4dp"
+            android:text="男"
+            android:textColor="@color/hint_text"
+            android:textSize="@dimen/text_size_3"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fg_per_rl_date"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/main_margin"
+            android:text="生日"
+            android:textColor="@color/title_class_2"
+            android:textSize="@dimen/text_size_3"/>
+
+        <ImageView
+            android:id="@+id/fg_per_pre4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/pre"/>
+
+        <TextView
+            android:id="@+id/fg_per_avert_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/fg_per_pre4"
+            android:padding="4dp"
+            android:text="1998.05.20"
+            android:textColor="@color/hint_text"
+            android:textSize="@dimen/text_size_3"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

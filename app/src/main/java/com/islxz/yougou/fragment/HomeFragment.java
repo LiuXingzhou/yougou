@@ -1,5 +1,6 @@
 package com.islxz.yougou.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -20,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.islxz.yougou.R;
+import com.islxz.yougou.activity.SecondActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -127,6 +129,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Navi
         mNavigationView.setNavigationItemSelectedListener(this);
         mHeaderView = mNavigationView.getHeaderView(0);
         mAvertImg = mHeaderView.findViewById(R.id.nav_avert_img);
+        mAvertImg.setOnClickListener(this);
         mAvertTV1 = mHeaderView.findViewById(R.id.nav_avert_tv1);
         mAvertTV2 = mHeaderView.findViewById(R.id.nav_avert_tv2);
         mDaiFKLL = mHeaderView.findViewById(R.id.nav_dai_f_k);
@@ -143,63 +146,76 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Navi
 
     @Override
     public void onClick(View view) {
+        Intent intent = new Intent(getActivity(), SecondActivity.class);
         switch (view.getId()) {
             case R.id.abar_back://菜单
-                Toast.makeText(getActivity(), "菜单", Toast.LENGTH_SHORT).show();
                 mDrawerLayout.openDrawer(Gravity.START);
-                break;
+                return;
             case R.id.abar_search://搜索
                 Toast.makeText(getActivity(), "搜索", Toast.LENGTH_SHORT).show();
-                break;
+                return;
             case R.id.fg_home_ll1://女装
                 Toast.makeText(getActivity(), "女装", Toast.LENGTH_SHORT).show();
-                break;
+                return;
             case R.id.fg_home_ll2://男装
                 Toast.makeText(getActivity(), "男装", Toast.LENGTH_SHORT).show();
-                break;
+                return;
             case R.id.fg_home_ll3://童装
                 Toast.makeText(getActivity(), "童装", Toast.LENGTH_SHORT).show();
-                break;
+                return;
             case R.id.float_btn://购物车
                 Toast.makeText(getActivity(), "购物车", Toast.LENGTH_SHORT).show();
+                return;
+            case R.id.nav_avert_img://个人信息
+                intent.putExtra("avert", 1);
                 break;
             case R.id.nav_dai_f_k://待付款
-                Toast.makeText(getActivity(), "待付款", Toast.LENGTH_SHORT).show();
+                intent.putExtra("avert", 2);
                 break;
             case R.id.nav_dai_s_h://待收货
-                Toast.makeText(getActivity(), "待收货", Toast.LENGTH_SHORT).show();
+                intent.putExtra("avert", 3);
                 break;
             case R.id.nav_quan_b_d_d://全部订单
-                Toast.makeText(getActivity(), "全部订单", Toast.LENGTH_SHORT).show();
+                intent.putExtra("avert", 4);
                 break;
             case R.id.nav_ll1://快递1
                 Toast.makeText(getActivity(), "快递1", Toast.LENGTH_SHORT).show();
-                break;
+                return;
             case R.id.nav_ll2://快递2
                 Toast.makeText(getActivity(), "快递2", Toast.LENGTH_SHORT).show();
-                break;
+                return;
         }
+        mDrawerLayout.closeDrawer(Gravity.START);
+        getActivity().startActivity(intent);
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        Intent intent = new Intent(getActivity(), SecondActivity.class);
         switch (item.getItemId()) {
             case R.id.nav_menu_home_collection://我的收藏
+                intent.putExtra("item", 1);
                 break;
             case R.id.nav_menu_home_news://我的消息
+                intent.putExtra("item", 2);
                 break;
             case R.id.nav_menu_home_coupon://我的优惠券
+                intent.putExtra("item", 3);
                 break;
             case R.id.nav_menu_home_refund://退款/售后
+                intent.putExtra("item", 4);
                 break;
             case R.id.nav_menu_home_address://收货地址
+                intent.putExtra("item", 5);
                 break;
             case R.id.nav_menu_home_setting://设置
+                intent.putExtra("item", 6);
                 break;
             case R.id.nav_menu_home_exit://退出登录
                 break;
         }
         mDrawerLayout.closeDrawer(Gravity.START);
+        getActivity().startActivity(intent);
         return true;
     }
 }
