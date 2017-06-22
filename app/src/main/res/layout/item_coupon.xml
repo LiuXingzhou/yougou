@@ -1,61 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
                 android:layout_marginTop="@dimen/main_margin2"
-                android:background="@color/white"
-              android:layout_height="80dp">
+                android:background="@color/white">
 
     <LinearLayout
         android:id="@+id/itcou_ll1"
-        android:layout_margin="10dp"
-        android:orientation="horizontal"
         android:layout_width="60dp"
-        android:layout_height="60dp">
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="¥ "
             android:textColor="@color/main_color"
-            android:textSize="@dimen/text_size_4"
-            android:layout_height="wrap_content"/>
+            android:textSize="@dimen/text_size_4"/>
+
         <TextView
             android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:text="30"
-            android:textSize="35sp"
             android:textColor="@color/main_color"
-            android:layout_height="match_parent"/>
+            android:textSize="35sp"/>
 
     </LinearLayout>
 
     <View
         android:id="@+id/itcou_v1"
-        android:background="@color/parting_line"
-        android:layout_marginTop="@dimen/abar_padding"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
         android:layout_marginBottom="@dimen/abar_padding"
         android:layout_marginRight="@dimen/main_margin2"
-        android:layout_width="1dp"
+        android:layout_marginTop="@dimen/abar_padding"
         android:layout_toRightOf="@id/itcou_ll1"
-        android:layout_height="match_parent"/>
+        android:background="@color/parting_line"/>
 
     <TextView
-        android:layout_toRightOf="@id/itcou_v1"
-        android:layout_alignTop="@id/itcou_ll1"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/itcou_ll1"
+        android:layout_toRightOf="@id/itcou_v1"
         android:text="耐克运动鞋专卖店"
         android:textColor="@color/title_class_1"
-        android:textSize="@dimen/text_size_3"
-        android:layout_height="wrap_content"/>
+        android:textSize="@dimen/text_size_3"/>
 
 
     <TextView
-        android:layout_toRightOf="@id/itcou_v1"
-        android:layout_alignBottom="@id/itcou_ll1"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/itcou_ll1"
+        android:layout_toRightOf="@id/itcou_v1"
         android:text="你好，这款鞋有相同类似的吗"
         android:textColor="@color/title_class_2"
-        android:textSize="@dimen/text_size_4"
-        android:layout_height="wrap_content"/>
+        android:textSize="@dimen/text_size_4"/>
 
 
 </RelativeLayout>

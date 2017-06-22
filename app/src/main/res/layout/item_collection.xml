@@ -27,30 +27,30 @@
         android:id="@+id/itco_tv_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/itco_iv"
         android:layout_marginBottom="@dimen/main_margin2"
         android:layout_toRightOf="@id/itco_iv"
-        android:layout_alignBottom="@id/itco_iv"
         android:text="¥188"
         android:textColor="@color/title_class_1"
         android:textSize="@dimen/text_size_4"/>
 
     <ImageButton
         android:layout_width="30dp"
-        android:layout_marginTop="@dimen/main_margin2"
-        android:layout_marginRight="@dimen/main_margin"
+        android:layout_height="30dp"
         android:layout_alignParentRight="true"
-        android:src="@drawable/collection"
+        android:layout_marginRight="@dimen/main_margin"
+        android:layout_marginTop="@dimen/main_margin2"
         android:background="@color/transparent"
         android:scaleType="centerInside"
-        android:layout_height="30dp"/>
+        android:src="@drawable/collection"/>
 
     <Button
         android:id="@+id/itdsh_rl3_con"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_width="wrap_content"
         android:layout_marginBottom="@dimen/main_margin2"
-        android:layout_height="30dp"
         android:layout_marginRight="@dimen/main_margin"
         android:background="@color/skyblue"
         android:text="找相似"
