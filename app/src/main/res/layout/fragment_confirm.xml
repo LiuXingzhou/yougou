@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background">
+
+    <RelativeLayout
+        android:id="@+id/fg_conf_rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_margin2"
+        android:background="@color/white"
+        android:padding="@dimen/main_margin2">
+
+        <TextView
+            android:id="@+id/fg_conf_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="杰哥"
+            android:textColor="@color/title_class_1"
+            android:textSize="@dimen/text_size_4"/>
+
+        <TextView
+            android:id="@+id/fg_conf_tv_tell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/fg_conf_tv_name"
+            android:paddingLeft="@dimen/abar_padding"
+            android:text="130****7390"
+            android:textColor="@color/title_class_1"
+            android:textSize="@dimen/text_size_4"/>
+
+        <TextView
+            android:id="@+id/fg_conf_tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fg_conf_tv_name"
+            android:layout_marginTop="@dimen/main_margin3"
+            android:text="[家庭]广东深圳宝安区塘水围"
+            android:textColor="@color/title_class_1"
+            android:textSize="@dimen/text_size_4"/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignBottom="@id/fg_conf_tv_address"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/pre"/>
+
+        <TextView
+            android:id="@+id/fg_conf_tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fg_conf_tv_address"
+            android:layout_marginTop="@dimen/main_margin3"
+            android:text="周一到周五收货"
+            android:textColor="@color/title_class_1"
+            android:textSize="@dimen/text_size_4"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fg_conf_rl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fg_conf_rl1"
+        android:layout_marginTop="@dimen/main_margin2"
+        android:background="@color/white"
+        android:padding="@dimen/main_margin2">
+
+        <TextView
+            android:id="@+id/fg_conf_tv_allprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="应付金额：414元"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_1"/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignBottom="@id/fg_conf_tv_allprice"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/down"/>
+
+        <TextView
+            android:id="@+id/fg_conf_tv_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fg_conf_tv_allprice"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/abar_padding"
+            android:text="免运费"
+            android:textColor="@color/hint_text"
+            android:textSize="@dimen/text_size_5"/>
+
+        <View
+            android:id="@+id/fg_conf_rl2_v"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/fg_conf_tv_hint"
+            android:layout_marginTop="@dimen/main_margin2"
+            android:background="@color/parting_line"/>
+
+        <TextView
+            android:id="@+id/fg_conf_rl2_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fg_conf_rl2_v"
+            android:layout_marginTop="@dimen/main_margin2"
+            android:text="商品总数："
+            android:textColor="@color/title_class_2"
+            android:textSize="@dimen/text_size_4"/>
+
+        <TextView
+            android:id="@+id/fg_conf_tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/fg_conf_rl2_tv1"
+            android:layout_alignParentRight="true"
+            android:text="3件"
+            android:textColor="@color/title_class_1"
+            android:textSize="@dimen/text_size_4"/>
+
+
+        <TextView
+            android:id="@+id/fg_conf_rl2_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fg_conf_rl2_tv1"
+            android:layout_marginTop="@dimen/main_margin2"
+            android:text="商品金额："
+            android:textColor="@color/title_class_2"
+            android:textSize="@dimen/text_size_4"/>
+
+        <TextView
+            android:id="@+id/fg_conf_tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/fg_conf_rl2_tv2"
+            android:layout_alignParentRight="true"
+            android:text="414元"
+            android:textColor="@color/title_class_1"
+            android:textSize="@dimen/text_size_4"/>
+
+        <TextView
+            android:id="@+id/fg_conf_rl2_tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fg_conf_rl2_tv2"
+            android:layout_marginTop="@dimen/main_margin2"
+            android:text="优惠券抵扣："
+            android:textColor="@color/title_class_2"
+            android:textSize="@dimen/text_size_4"/>
+
+        <TextView
+            android:id="@+id/fg_conf_tv_coupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/fg_conf_rl2_tv3"
+            android:layout_alignParentRight="true"
+            android:text="0元"
+            android:textColor="@color/title_class_1"
+            android:textSize="@dimen/text_size_4"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fg_conf_rl3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fg_conf_rl2"
+        android:layout_marginTop="@dimen/main_margin2"
+        android:background="@color/white"
+        android:padding="@dimen/main_margin2">
+
+        <TextView
+            android:id="@+id/fg_conf_rl3_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="线上支付"
+            android:textColor="@color/title_class_1"
+            android:textSize="@dimen/text_size_4"/>
+
+        <RadioButton
+            android:id="@+id/fg_conf_rb_online"
+            style="@style/RadioButtonMyIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/fg_conf_rl3_tv1"
+            android:layout_alignParentRight="true"/>
+
+        <View
+            android:id="@+id/fg_conf_rl3_v"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/fg_conf_rl3_tv1"
+            android:layout_marginTop="@dimen/main_margin2"
+            android:background="@color/hint_text"/>
+
+        <TextView
+            android:id="@+id/fg_conf_rl3_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fg_conf_rl3_v"
+            android:layout_marginTop="@dimen/main_margin2"
+            android:text="货到付款"
+            android:textColor="@color/title_class_1"
+            android:textSize="@dimen/text_size_4"/>
+
+        <RadioButton
+            android:id="@+id/fg_conf_rb_delivery"
+            style="@style/RadioButtonMyIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/fg_conf_rl3_tv2"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/fg_conf_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/main_color"
+            android:gravity="center"
+            android:text="提交订单"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_4"/>
+    </FrameLayout>
+
+
+</RelativeLayout>

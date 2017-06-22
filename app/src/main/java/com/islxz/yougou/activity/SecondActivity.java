@@ -51,6 +51,7 @@ public class SecondActivity extends AppCompatActivity {
     private FragmentTransaction mFragmentTransaction;
 
     private int avert;
+    private int express;
     private int item;
     private int goods;
     private int goodsid;
@@ -64,6 +65,7 @@ public class SecondActivity extends AppCompatActivity {
         mFragmentTransaction = mFragmentManager.beginTransaction();
         Intent intent = getIntent();
         avert = intent.getIntExtra("avert", 0);
+        express = intent.getIntExtra("express", 0);
         item = intent.getIntExtra("item", 0);
         goods = intent.getIntExtra("goods", 0);
         goodsid = intent.getIntExtra("goodsid", 0);
@@ -98,6 +100,12 @@ public class SecondActivity extends AppCompatActivity {
                     mFragmentTransaction.replace(R.id.main_se_fl, mQuanBudingdanFragment);
                     break;
             }
+            mFragmentTransaction.commit();
+        } else if (express != 0) {
+            mTitleTV.setText("物流详情");
+            if (mExpressFragment == null)
+                mExpressFragment = new ExpressFragment();
+            mFragmentTransaction.replace(R.id.main_se_fl, mExpressFragment);
             mFragmentTransaction.commit();
         } else if (item != 0) {
             switch (item) {

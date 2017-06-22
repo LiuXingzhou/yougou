@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@color/background">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/fg_address_rl"
         android:layout_marginBottom="@dimen/main_margin3">
 
         <LinearLayout
@@ -26,4 +27,24 @@
         </LinearLayout>
     </ScrollView>
 
-</LinearLayout>
+
+    <FrameLayout
+        android:id="@id/fg_address_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/fg_address_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/main_color"
+            android:gravity="center"
+            android:text="新增地址"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_4"/>
+
+    </FrameLayout>
+
+</RelativeLayout>

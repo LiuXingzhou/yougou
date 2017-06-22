@@ -179,11 +179,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Navi
                 intent.putExtra("avert", 4);
                 break;
             case R.id.nav_ll1://快递1
-                Toast.makeText(getActivity(), "快递1", Toast.LENGTH_SHORT).show();
-                return;
+                intent.putExtra("express", 1);
+                break;
             case R.id.nav_ll2://快递2
-                Toast.makeText(getActivity(), "快递2", Toast.LENGTH_SHORT).show();
-                return;
+                intent.putExtra("express", 1);
+                break;
         }
         mDrawerLayout.closeDrawer(Gravity.START);
         getActivity().startActivity(intent);

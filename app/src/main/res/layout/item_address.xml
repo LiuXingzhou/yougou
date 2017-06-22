@@ -86,6 +86,7 @@
 
         <RadioButton
             android:id="@+id/itex_rb"
+            style="@style/RadioButtonMyIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -94,6 +95,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/main_margin3"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@id/itex_rb"
             android:text="默认地址"

@@ -2,9 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@color/white"
-                android:paddingLeft="@dimen/abar_padding"
-                android:paddingRight="@dimen/abar_padding">
+                android:layout_marginLeft="@dimen/abar_padding"
+                android:layout_marginRight="@dimen/abar_padding"
+                android:background="@color/white">
 
     <ImageButton
         android:id="@+id/abar_back"
@@ -25,6 +25,18 @@
         android:text="首页"
         android:textColor="@color/main_color"
         android:textSize="@dimen/text_size_1"/>
+
+    <TextView
+        android:id="@+id/abar_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:text="取消"
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/text_size_3"
+        android:visibility="gone"/>
 
     <ImageButton
         android:id="@+id/abar_search"

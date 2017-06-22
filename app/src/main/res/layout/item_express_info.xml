@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/main_margin2">
+
+    <ImageView
+        android:id="@+id/itexi_iv_temp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="@dimen/main_margin2"
+        android:layout_marginTop="@dimen/main_margin3"/>
+
+    <LinearLayout
+        android:id="@+id/itexi_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/main_margin2"
+        android:layout_marginTop="@dimen/main_margin3"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/itexi_iv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/circular_unselect"/>
+
+        <TextView
+            android:id="@+id/itexi_tv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[深圳]派件员电话：13025464654"
+            android:textColor="@color/title_class_1"
+            android:textSize="@dimen/text_size_4"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/itexi_tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/itexi_ll"
+        android:layout_marginBottom="@dimen/main_margin3"
+        android:layout_toRightOf="@id/itexi_iv_temp"
+        android:text="2017-04-22 22:54"
+        android:textColor="@color/hint_text"
+        android:textSize="@dimen/text_size_5"/>
+
+</RelativeLayout>

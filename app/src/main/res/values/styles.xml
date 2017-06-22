@@ -9,4 +9,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="RadioButtonMyIcon">
+        <item name="android:button">@drawable/radiobutton_icon</item>
+    </style>
+
 </resources>
