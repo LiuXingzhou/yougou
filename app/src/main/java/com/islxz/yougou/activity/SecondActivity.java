@@ -17,6 +17,8 @@ import com.islxz.yougou.fragment.CouponFragment;
 import com.islxz.yougou.fragment.DaiFukuanFragment;
 import com.islxz.yougou.fragment.DaiShouhuoFragment;
 import com.islxz.yougou.fragment.ExpressFragment;
+import com.islxz.yougou.fragment.GoodsFragment;
+import com.islxz.yougou.fragment.GoodsListFragment;
 import com.islxz.yougou.fragment.NewsFragment;
 import com.islxz.yougou.fragment.PersonalFragment;
 import com.islxz.yougou.fragment.QuanBudingdanFragment;
@@ -42,12 +44,16 @@ public class SecondActivity extends AppCompatActivity {
     private RefundFragment mRefundFragment;
     private AddressFragment mAddressFragment;
     private SettingFragment mSettingFragment;
+    private GoodsListFragment mGoodsListFragment;
+    private GoodsFragment mGoodsFragment;
 
     private FragmentManager mFragmentManager;
     private FragmentTransaction mFragmentTransaction;
 
     private int avert;
     private int item;
+    private int goods;
+    private int goodsid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +65,8 @@ public class SecondActivity extends AppCompatActivity {
         Intent intent = getIntent();
         avert = intent.getIntExtra("avert", 0);
         item = intent.getIntExtra("item", 0);
+        goods = intent.getIntExtra("goods", 0);
+        goodsid = intent.getIntExtra("goodsid", 0);
         changeFragment();
     }
 
@@ -90,6 +98,7 @@ public class SecondActivity extends AppCompatActivity {
                     mFragmentTransaction.replace(R.id.main_se_fl, mQuanBudingdanFragment);
                     break;
             }
+            mFragmentTransaction.commit();
         } else if (item != 0) {
             switch (item) {
                 case 1:
@@ -129,8 +138,35 @@ public class SecondActivity extends AppCompatActivity {
                     mFragmentTransaction.replace(R.id.main_se_fl, mSettingFragment);
                     break;
             }
+            mFragmentTransaction.commit();
+        } else if (goods != 0) {
+            mSearchIB.setVisibility(View.VISIBLE);
+            switch (goods) {
+                case 1:
+                    mTitleTV.setText("女装");
+                    break;
+                case 2:
+                    mTitleTV.setText("男装");
+                    break;
+                case 3:
+                    mTitleTV.setText("童装");
+                    break;
+            }
+            if (goodsid != 0) {
+                mSearchIB.setImageResource(R.drawable.share);
+                if (mGoodsFragment == null)
+                    mGoodsFragment = new GoodsFragment();
+                mFragmentTransaction.replace(R.id.main_se_fl, mGoodsFragment);
+            } else {
+                Bundle bundle = new Bundle();
+                if (mGoodsListFragment == null)
+                    mGoodsListFragment = new GoodsListFragment();
+                bundle.putInt("goods", goods);
+                mGoodsListFragment.setArguments(bundle);
+                mFragmentTransaction.replace(R.id.main_se_fl, mGoodsListFragment);
+            }
+            mFragmentTransaction.commit();
         }
-        mFragmentTransaction.commit();
     }
 
     private void bindID() {

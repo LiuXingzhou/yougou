@@ -6,6 +6,8 @@
     <dimen name="abr_search">50dp</dimen>
     <dimen name="float_btn_margin">50dp</dimen>
     <dimen name="main_margin">20dp</dimen>
+    <dimen name="main_margin2">15dp</dimen>
+    <dimen name="main_margin3">10dp</dimen>
     <dimen name="text_size_1">22sp</dimen>
     <dimen name="text_size_2">20sp</dimen>
     <dimen name="text_size_3">16sp</dimen>

@@ -155,14 +155,14 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Navi
                 Toast.makeText(getActivity(), "搜索", Toast.LENGTH_SHORT).show();
                 return;
             case R.id.fg_home_ll1://女装
-                Toast.makeText(getActivity(), "女装", Toast.LENGTH_SHORT).show();
-                return;
+                intent.putExtra("goods", 1);
+                break;
             case R.id.fg_home_ll2://男装
-                Toast.makeText(getActivity(), "男装", Toast.LENGTH_SHORT).show();
-                return;
+                intent.putExtra("goods", 2);
+                break;
             case R.id.fg_home_ll3://童装
-                Toast.makeText(getActivity(), "童装", Toast.LENGTH_SHORT).show();
-                return;
+                intent.putExtra("goods", 3);
+                break;
             case R.id.float_btn://购物车
                 Toast.makeText(getActivity(), "购物车", Toast.LENGTH_SHORT).show();
                 return;
@@ -212,7 +212,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Navi
                 intent.putExtra("item", 6);
                 break;
             case R.id.nav_menu_home_exit://退出登录
-                break;
+                getActivity().finish();
+                return true;
         }
         mDrawerLayout.closeDrawer(Gravity.START);
         getActivity().startActivity(intent);

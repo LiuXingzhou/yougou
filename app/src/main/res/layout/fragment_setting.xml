@@ -1,6 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
+              android:background="@color/background"
+              android:orientation="vertical"
               android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/fg_set_rl1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:padding="@dimen/main_margin2"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="接收通知"
+            android:textColor="@color/title_class_2"
+            android:textSize="@dimen/text_size_3"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fg_set_rl2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="@dimen/main_margin2"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="修改密码"
+            android:textColor="@color/title_class_2"
+            android:textSize="@dimen/text_size_3"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:paddingRight="-30dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/pre"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fg_set_rl3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:padding="@dimen/main_margin2"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="关于我们"
+            android:textColor="@color/title_class_2"
+            android:textSize="@dimen/text_size_3"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:paddingRight="-30dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/pre"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fg_set_rl4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="@dimen/main_margin2"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="清除缓存"
+            android:textColor="@color/title_class_2"
+            android:textSize="@dimen/text_size_3"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingRight="-30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/pre"/>
+
+    </RelativeLayout>
+
 
 </LinearLayout>

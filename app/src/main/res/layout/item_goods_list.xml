@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/itgl_ll"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/main_margin3"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/itgl_img"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="6"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img2"/>
+
+    <TextView
+        android:id="@+id/itgl_name"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/main_margin3"
+        android:layout_weight="3"
+        android:gravity="center_vertical"
+        android:text="夹克男春季青年外套男士 休闲上衣潮流大码 立领男装夹克"
+        android:textSize="@dimen/text_size_4"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/main_margin3"
+        android:layout_marginLeft="@dimen/main_margin3"
+        android:layout_marginRight="@dimen/main_margin3"
+        android:layout_weight="2"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/itgl_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥89"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_size_4"/>
+
+        <TextView
+            android:id="@+id/itgl_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="已售：564件"
+            android:textColor="@color/hint_text"
+            android:textSize="@dimen/text_size_4"/>
+
+    </RelativeLayout>
+</LinearLayout>

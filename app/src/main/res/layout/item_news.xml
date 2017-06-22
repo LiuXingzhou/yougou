@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/main_margin2"
+                android:background="@color/white"
+              android:layout_height="80dp">
+
+    <ImageView
+        android:id="@+id/itne_img"
+        android:layout_margin="10dp"
+        android:src="@drawable/img1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"/>
+    <TextView
+        android:layout_toRightOf="@id/itne_img"
+        android:layout_alignTop="@id/itne_img"
+        android:layout_width="wrap_content"
+        android:text="耐克运动鞋专卖店"
+        android:textColor="@color/title_class_1"
+        android:textSize="@dimen/text_size_3"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:layout_toRightOf="@id/itne_img"
+        android:layout_alignBottom="@id/itne_img"
+        android:layout_width="wrap_content"
+        android:text="你好，这款鞋有相同类似的吗"
+        android:textColor="@color/title_class_2"
+        android:textSize="@dimen/text_size_4"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

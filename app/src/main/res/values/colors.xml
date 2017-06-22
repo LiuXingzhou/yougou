@@ -8,6 +8,8 @@
     <color name="transparent_part2">#aaffffff</color>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
+    <color name="red">#ff0000</color>
+    <color name="skyblue">#00bfff</color>
     <color name="background">#f4f0fe</color>
     <color name="main_color">#7565ae</color>
     <color name="parting_line">#e1e1e1</color>

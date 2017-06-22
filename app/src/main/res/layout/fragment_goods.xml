@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fg_goods_rl4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/fg_goods_rv"
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+            </android.support.v7.widget.RecyclerView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/main_margin2">
+
+                <TextView
+                    android:id="@+id/fg_goods_tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="夹克男春季青年外套男士 休闲上衣潮流大码 立领男装夹克衫"
+                    android:textColor="@color/title_class_1"
+                    android:textSize="@dimen/text_size_4"/>
+
+                <TextView
+                    android:id="@+id/fg_goods_tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fg_goods_tv_name"
+                    android:layout_marginTop="@dimen/main_margin3"
+                    android:gravity="center"
+                    android:text="¥189"
+                    android:textColor="@color/title_class_1"
+                    android:textSize="@dimen/text_size_4"/>
+
+                <TextView
+                    android:id="@+id/fg_goods_tv_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/fg_goods_tv_price"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/fg_goods_tv_name"
+                    android:gravity="center"
+                    android:text="已售：564件"
+                    android:textColor="@color/title_class_1"
+                    android:textSize="@dimen/text_size_4"/>
+
+                <View
+                    android:id="@+id/fg_goods_v1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/fg_goods_tv_num"
+                    android:layout_marginTop="@dimen/main_margin3"
+                    android:background="@color/parting_line"/>
+
+                <ImageView
+                    android:id="@+id/fg_goods_iv_sure1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/fg_goods_v1"
+                    android:layout_marginTop="@dimen/main_margin3"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/sure"/>
+
+                <TextView
+                    android:id="@+id/fg_goods_tv_sure1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/fg_goods_iv_sure1"
+                    android:layout_alignTop="@id/fg_goods_iv_sure1"
+                    android:layout_marginLeft="@dimen/abar_padding"
+                    android:layout_toRightOf="@id/fg_goods_iv_sure1"
+                    android:gravity="center"
+                    android:text="7天无理由退货"/>
+
+                <ImageView
+                    android:id="@+id/fg_goods_iv_sure2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignBottom="@id/fg_goods_tv_sure1"
+                    android:layout_alignTop="@id/fg_goods_tv_sure1"
+                    android:layout_marginLeft="@dimen/main_margin3"
+                    android:layout_toRightOf="@id/fg_goods_tv_sure1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/sure"/>
+
+                <TextView
+                    android:id="@+id/fg_goods_tv_sure2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/fg_goods_iv_sure2"
+                    android:layout_alignTop="@id/fg_goods_iv_sure2"
+                    android:layout_marginLeft="@dimen/abar_padding"
+                    android:layout_toRightOf="@id/fg_goods_iv_sure2"
+                    android:gravity="center"
+                    android:text="48小时发货"/>
+
+                <ImageView
+                    android:id="@+id/fg_goods_iv_sure3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignBottom="@id/fg_goods_tv_sure2"
+                    android:layout_alignTop="@id/fg_goods_tv_sure2"
+                    android:layout_marginLeft="@dimen/main_margin3"
+                    android:layout_toRightOf="@id/fg_goods_tv_sure2"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/sure"/>
+
+                <TextView
+                    android:id="@+id/fg_goods_tv_sure3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/fg_goods_iv_sure3"
+                    android:layout_alignTop="@id/fg_goods_iv_sure3"
+                    android:layout_marginLeft="@dimen/abar_padding"
+                    android:layout_toRightOf="@id/fg_goods_iv_sure3"
+                    android:gravity="center"
+                    android:text="包邮"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/main_margin3"
+                android:background="@color/white"
+                android:padding="@dimen/main_margin3">
+
+                <TextView
+                    android:id="@+id/fg_goods_rl2_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="颜色"
+                    android:textColor="@color/title_class_1"
+                    android:textSize="@dimen/text_size_4"/>
+
+                <LinearLayout
+                    android:id="@+id/fg_goods_rl2_ll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fg_goods_rl2_tv1"
+                    android:layout_marginTop="@dimen/main_margin3"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/button"
+                        android:text="藏青色"
+                        android:textColor="@color/title_class_2"
+                        android:textSize="@dimen/text_size_5"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/button"
+                        android:text="卡其色"
+                        android:textColor="@color/title_class_2"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/button"
+                        android:text="咖啡色"
+                        android:textColor="@color/title_class_2"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/fg_goods_rl2_tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fg_goods_rl2_ll1"
+                    android:paddingTop="@dimen/main_margin2"
+                    android:text="尺码"
+                    android:textColor="@color/title_class_1"
+                    android:textSize="@dimen/text_size_4"/>
+
+                <LinearLayout
+                    android:id="@+id/fg_goods_rl2_ll2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fg_goods_rl2_tv2"
+                    android:layout_marginTop="@dimen/main_margin3"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/button"
+                        android:text="S(165/88A)"
+                        android:textColor="@color/title_class_2"
+                        android:textSize="@dimen/text_size_5"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/button"
+                        android:text="M(170/92A)"
+                        android:textColor="@color/title_class_2"
+                        android:textSize="@dimen/text_size_5"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/button"
+                        android:text="L(175/96A)"
+                        android:textColor="@color/title_class_2"
+                        android:textSize="@dimen/text_size_5"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fg_goods_rl2_ll3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fg_goods_rl2_ll2"
+                    android:layout_marginTop="@dimen/main_margin3"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/button"
+                        android:text="XL(180/88A)"
+                        android:textColor="@color/title_class_2"
+                        android:textSize="@dimen/text_size_5"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/button"
+                        android:text="XXL(185/104A)"
+                        android:textColor="@color/title_class_2"
+                        android:textSize="@dimen/text_size_5"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:background="@color/skyblue"
+                        android:textColor="@color/title_class_2"
+                        android:textSize="@dimen/text_size_5"
+                        android:visibility="invisible"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/main_margin3"
+                android:layout_marginTop="@dimen/main_margin3"
+                android:background="@color/white"
+                android:padding="@dimen/main_margin3">
+
+                <TextView
+                    android:id="@+id/fg_goods_rl3_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="用户评价"
+                    android:textColor="@color/title_class_1"
+                    android:textSize="@dimen/text_size_3"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/fg_goods_rl3_img_avert"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/fg_goods_rl3_tv1"
+                    android:layout_marginTop="@dimen/main_margin3"
+                    android:src="@drawable/avert"/>
+
+                <TextView
+                    android:id="@+id/fg_goods_rl3_tv_avert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/fg_goods_rl3_img_avert"
+                    android:layout_alignTop="@id/fg_goods_rl3_img_avert"
+                    android:layout_toRightOf="@id/fg_goods_rl3_img_avert"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/abar_padding"
+                    android:text="风·清明"
+                    android:textColor="@color/title_class_2"
+                    android:textSize="@dimen/text_size_5"/>
+
+                <TextView
+                    android:id="@+id/fg_goods_rl3_tv_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fg_goods_rl3_img_avert"
+                    android:layout_marginTop="@dimen/main_margin3"
+                    android:text="还挺不错的、挺帅气的，尺码也很合适。"
+                    android:textColor="@color/title_class_1"
+                    android:textSize="@dimen/text_size_3"/>
+
+                <TextView
+                    android:id="@+id/fg_goods_rl3_tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fg_goods_rl3_tv_comment"
+                    android:layout_marginTop="@dimen/main_margin3"
+                    android:gravity="center"
+                    android:text="2017-05-01"
+                    android:textColor="@color/hint_text"
+                    android:textSize="@dimen/text_size_5"/>
+
+
+                <TextView
+                    android:id="@+id/fg_goods_rl3_tv_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/fg_goods_rl3_tv_date"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/fg_goods_rl3_tv_date"
+                    android:gravity="center"
+                    android:text="颜色：咖啡色，尺码：XL"
+                    android:textColor="@color/hint_text"
+                    android:textSize="@dimen/text_size_5"/>
+
+                <View
+                    android:id="@+id/fg_goods_rl3_v1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/fg_goods_rl3_tv_date"
+                    android:layout_marginTop="@dimen/main_margin3"
+                    android:background="@color/parting_line"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fg_goods_rl3_v1"
+                    android:layout_marginTop="@dimen/main_margin3"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:text="查看全部评论(1236)"
+                    android:textSize="@dimen/text_size_4"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@id/fg_goods_rl4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/fg_goods_ll_collection"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/collection"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收藏"
+                android:textColor="@color/hint_text"
+                android:textSize="@dimen/text_size_5"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/fg_goods_ll_collection"
+            android:background="@color/parting_line"/>
+
+        <LinearLayout
+            android:id="@+id/fg_goods_ll_customerservice"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@id/fg_goods_ll_collection"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/customerservice"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="客服"
+                android:textColor="@color/hint_text"
+                android:textSize="@dimen/text_size_5"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@id/fg_goods_ll_customerservice"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/main_color"
+                android:gravity="center"
+                android:text="加入购物车"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="立即购买"
+                android:textColor="@color/title_class_1"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

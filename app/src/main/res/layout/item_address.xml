@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="150dp"
+              android:layout_marginTop="@dimen/main_margin2"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/abar_padding"
+        android:layout_marginBottom="@dimen/abar_padding"
+        android:layout_marginLeft="@dimen/main_margin2"
+        android:layout_marginRight="@dimen/main_margin2"
+        android:orientation="vertical"
+        android:layout_weight="2"
+        android:layout_height="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+            <TextView
+                android:text="李卓节"
+                android:textSize="@dimen/text_size_4"
+                android:textColor="@color/title_class_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="130****7390"
+                android:textSize="@dimen/text_size_4"
+                android:textColor="@color/title_class_1"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+            <TextView
+                android:text="[家庭]广东深圳宝安区塘水围"
+                android:layout_width="wrap_content"
+                android:textColor="@color/title_class_2"
+                android:textSize="@dimen/text_size_4"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_height="0dp">
+
+            <TextView
+                android:text="周一到周日发货"
+                android:layout_width="wrap_content"
+                android:textColor="@color/title_class_2"
+                android:textSize="@dimen/text_size_4"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/parting_line"
+        android:layout_height="1dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/abar_padding"
+        android:layout_marginBottom="@dimen/abar_padding"
+        android:layout_marginLeft="@dimen/main_margin2"
+        android:layout_marginRight="@dimen/main_margin2"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+
+        <RadioButton
+            android:id="@+id/itex_rb"
+            android:enabled="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="默认地址"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_size_4"
+            android:layout_toRightOf="@id/itex_rb"
+            android:textColor="@color/title_class_1"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/itex_tv1"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/title_class_2"
+            android:textSize="@dimen/text_size_4"
+            android:text="删除"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/itex_iv_del"
+            android:layout_toLeftOf="@id/itex_tv1"
+            android:layout_centerVertical="true"
+            android:src="@drawable/del"
+            android:scaleType="centerInside"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+
+        <TextView
+            android:id="@+id/itex_tv2"
+            android:layout_width="wrap_content"
+            android:layout_toLeftOf="@id/itex_iv_del"
+            android:layout_marginRight="@dimen/main_margin2"
+            android:layout_centerVertical="true"
+            android:textColor="@color/title_class_2"
+            android:textSize="@dimen/text_size_4"
+            android:text="编辑"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/itex_iv_edit"
+            android:layout_toLeftOf="@id/itex_tv2"
+            android:scaleType="centerInside"
+            android:layout_centerVertical="true"
+            android:src="@drawable/edit"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
