@@ -2,6 +2,8 @@ package com.islxz.yougou.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -18,9 +20,9 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.islxz.yougou.R;
+import com.islxz.yougou.activity.MainActivity;
 import com.islxz.yougou.activity.SecondActivity;
 
 import java.util.ArrayList;
@@ -57,10 +59,22 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Navi
     private LinearLayout mLinearLayout4;
     private LinearLayout mLinearLayout5;
 
-    private int[] mInts = new int[]{R.color.main_color, R.color.title_class_1, R.color
-            .title_class_2};
+    private int[] mInts = new int[]{R.drawable.logo_sign_in, R.drawable.img1, R.drawable.img2};
     private List<View> mViewList;
     private PagerAdapter mPagerAdapter;
+
+    private LinearLayout mPointLL;
+    private int current = 0;
+
+    public Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            if (mViewPager.getCurrentItem() == mViewList.size() - 1) {
+                mViewPager.setCurrentItem(0);
+            } else
+                mViewPager.setCurrentItem(mViewPager.getCurrentItem() + 1);
+        }
+    };
 
     @Nullable
     @Override
@@ -69,15 +83,42 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Navi
         View view = inflater.inflate(R.layout.fragment_home, null);
         bindID(view);
         initialViewPager(inflater);
+        playViewPager();
         return view;
     }
 
+    private void playViewPager() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                do {
+                    try {
+                        Thread.sleep(2500);
+                        mHandler.sendEmptyMessage(0);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                } while (true);
+            }
+        }).start();
+    }
+
     private void initialViewPager(LayoutInflater inflater) {
+        View pointView;
+        LinearLayout.LayoutParams layoutParams;
         mViewList = new ArrayList<>();
         for (int i = 0; i < mInts.length; i++) {
             View view = inflater.inflate(android.R.layout.simple_list_item_1, null);
             view.setBackgroundResource(mInts[i]);
             mViewList.add(view);
+
+            pointView = new View(getActivity());
+            pointView.setBackgroundResource(R.drawable.point_select);
+            layoutParams = new LinearLayout.LayoutParams(25, 25);
+            if (i != 0)
+                layoutParams.leftMargin = 10;
+            pointView.setEnabled(false);
+            mPointLL.addView(pointView, layoutParams);
         }
         mPagerAdapter = new PagerAdapter() {
             @Override
@@ -102,6 +143,25 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Navi
             }
         };
         mViewPager.setAdapter(mPagerAdapter);
+        mPointLL.getChildAt(0).setEnabled(true);
+        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                mPointLL.getChildAt(position).setEnabled(true);
+                mPointLL.getChildAt(current).setEnabled(false);
+                current = position;
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     private void bindID(View view) {
@@ -142,6 +202,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Navi
         mLinearLayout4.setOnClickListener(this);
         mLinearLayout5 = mHeaderView.findViewById(R.id.nav_ll2);
         mLinearLayout5.setOnClickListener(this);
+
+        mPointLL = view.findViewById(R.id.fg_home_rl_point);
     }
 
     @Override
@@ -152,8 +214,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Navi
                 mDrawerLayout.openDrawer(Gravity.START);
                 return;
             case R.id.abar_search://搜索
-                Toast.makeText(getActivity(), "搜索", Toast.LENGTH_SHORT).show();
-                return;
+                intent.putExtra("search", 1);
+                break;
             case R.id.fg_home_ll1://女装
                 intent.putExtra("goods", 1);
                 break;
@@ -164,8 +226,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Navi
                 intent.putExtra("goods", 3);
                 break;
             case R.id.float_btn://购物车
-                Toast.makeText(getActivity(), "购物车", Toast.LENGTH_SHORT).show();
-                return;
+                intent.putExtra("shoppingcar", 1);
+                break;
             case R.id.nav_avert_img://个人信息
                 intent.putExtra("avert", 1);
                 break;
@@ -212,6 +274,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Navi
                 intent.putExtra("item", 6);
                 break;
             case R.id.nav_menu_home_exit://退出登录
+                getActivity().startActivity(new Intent(getActivity(), MainActivity.class).putExtra
+                        ("signin", 1));
                 getActivity().finish();
                 return true;
         }

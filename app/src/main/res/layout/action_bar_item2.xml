@@ -15,7 +15,7 @@
         android:background="@color/transparent"
         android:padding="5dp"
         android:scaleType="centerInside"
-        android:src="@drawable/menu"/>
+        android:src="@drawable/back"/>
 
     <EditText
         android:id="@+id/abar_edit"

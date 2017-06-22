@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/background"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/fg_search_include"
+        layout="@layout/action_bar_item2"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/main_margin2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="历史搜索"
+            android:textColor="@color/hint_text"
+            android:textSize="@dimen/text_size_5"/>
+
+        <ImageButton
+            android:id="@+id/fg_search_ib_del"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/del"/>
+
+        <LinearLayout
+            android:id="@+id/fg_search_rl1_ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fg_search_ib_del"
+            android:layout_marginTop="@dimen/main_margin3"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button"
+                android:backgroundTint="@color/white"
+                android:text="鞋子 男"
+                android:textColor="@color/title_class_2"
+                android:textSize="@dimen/text_size_5"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button"
+                android:backgroundTint="@color/white"
+                android:text="休闲裤"
+                android:textColor="@color/title_class_2"
+                android:textSize="@dimen/text_size_5"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button"
+                android:backgroundTint="@color/white"
+                android:text="鞋子 男"
+                android:textColor="@color/title_class_2"
+                android:textSize="@dimen/text_size_5"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button"
+                android:backgroundTint="@color/white"
+                android:text="休闲裤"
+                android:textColor="@color/title_class_2"
+                android:textSize="@dimen/text_size_5"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fg_search_rl1_ll2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fg_search_rl1_ll1"
+            android:layout_marginTop="@dimen/main_margin3"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button"
+                android:backgroundTint="@color/white"
+                android:text="鞋子 男"
+                android:textColor="@color/title_class_2"
+                android:textSize="@dimen/text_size_5"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button"
+                android:backgroundTint="@color/white"
+                android:text="休闲裤"
+                android:textColor="@color/title_class_2"
+                android:textSize="@dimen/text_size_5"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button"
+                android:backgroundTint="@color/white"
+                android:text="白鞋子"
+                android:textColor="@color/title_class_2"
+                android:textSize="@dimen/text_size_5"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button"
+                android:backgroundTint="@color/white"
+                android:text="休闲裤"
+                android:textColor="@color/title_class_2"
+                android:textSize="@dimen/text_size_5"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

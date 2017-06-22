@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.islxz.yougou.R;
 import com.islxz.yougou.fragment.AddressFragment;
 import com.islxz.yougou.fragment.CollectionFragment;
+import com.islxz.yougou.fragment.ConfirmFragment;
 import com.islxz.yougou.fragment.CouponFragment;
 import com.islxz.yougou.fragment.DaiFukuanFragment;
 import com.islxz.yougou.fragment.DaiShouhuoFragment;
@@ -23,7 +24,9 @@ import com.islxz.yougou.fragment.NewsFragment;
 import com.islxz.yougou.fragment.PersonalFragment;
 import com.islxz.yougou.fragment.QuanBudingdanFragment;
 import com.islxz.yougou.fragment.RefundFragment;
+import com.islxz.yougou.fragment.SearchFragment;
 import com.islxz.yougou.fragment.SettingFragment;
+import com.islxz.yougou.fragment.ShoppingCarFragment;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -32,6 +35,10 @@ public class SecondActivity extends AppCompatActivity {
     private TextView mTitleTV;
     private ImageButton mSearchIB;
     private FrameLayout mFrameLayout;
+
+    private ShoppingCarFragment mShoppingCarFragment;
+    private ConfirmFragment mConfirmFragment;
+    private SearchFragment mSearchFragment;
 
     private PersonalFragment mPersonalFragment;
     private DaiFukuanFragment mDaiFukuanFragment;
@@ -53,6 +60,9 @@ public class SecondActivity extends AppCompatActivity {
     private int avert;
     private int express;
     private int item;
+    private int shoppingcar;
+    private int confirm;
+    private int search;
     private int goods;
     private int goodsid;
 
@@ -67,6 +77,9 @@ public class SecondActivity extends AppCompatActivity {
         avert = intent.getIntExtra("avert", 0);
         express = intent.getIntExtra("express", 0);
         item = intent.getIntExtra("item", 0);
+        shoppingcar = intent.getIntExtra("shoppingcar", 0);
+        confirm = intent.getIntExtra("confirm", 0);
+        search = intent.getIntExtra("search", 0);
         goods = intent.getIntExtra("goods", 0);
         goodsid = intent.getIntExtra("goodsid", 0);
         changeFragment();
@@ -147,6 +160,24 @@ public class SecondActivity extends AppCompatActivity {
                     break;
             }
             mFragmentTransaction.commit();
+        } else if (shoppingcar != 0) {
+            mInclude.setVisibility(View.GONE);
+            if (mShoppingCarFragment == null)
+                mShoppingCarFragment = new ShoppingCarFragment();
+            mFragmentTransaction.replace(R.id.main_se_fl, mShoppingCarFragment);
+            mFragmentTransaction.commit();
+        } else if (confirm != 0) {
+            mTitleTV.setText("确认订单");
+            if (mConfirmFragment == null)
+                mConfirmFragment = new ConfirmFragment();
+            mFragmentTransaction.replace(R.id.main_se_fl, mConfirmFragment);
+            mFragmentTransaction.commit();
+        } else if (search != 0) {
+            mInclude.setVisibility(View.GONE);
+            if (mSearchFragment == null)
+                mSearchFragment = new SearchFragment();
+            mFragmentTransaction.replace(R.id.main_se_fl, mSearchFragment);
+            mFragmentTransaction.commit();
         } else if (goods != 0) {
             mSearchIB.setVisibility(View.VISIBLE);
             switch (goods) {
@@ -189,8 +220,14 @@ public class SecondActivity extends AppCompatActivity {
         });
         mTitleTV = mInclude.findViewById(R.id.abar_title);
         mSearchIB = mInclude.findViewById(R.id.abar_search);
-        mSearchIB.setVisibility(View.GONE);
-
+        mSearchIB.setVisibility(View.INVISIBLE);
+        mSearchIB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SecondActivity.this, SecondActivity.class).putExtra("search",
+                        1));
+            }
+        });
         mFrameLayout = (FrameLayout) findViewById(R.id.main_se_fl);
     }
 }

@@ -6,10 +6,10 @@
               android:orientation="vertical">
 
     <ImageButton
+        android:id="@+id/custom_as_ib_add"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:background="@color/transparent"
-        android:onClick="pressAdd"
         android:scaleType="centerInside"
         android:src="@drawable/add"/>
 
@@ -30,10 +30,10 @@
         android:textSize="@dimen/text_size_4"/>
 
     <ImageButton
+        android:id="@+id/custom_as_ib_sub"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:background="@color/transparent"
-        android:onClick="pressSub"
         android:scaleType="centerInside"
         android:src="@drawable/sub"/>
 

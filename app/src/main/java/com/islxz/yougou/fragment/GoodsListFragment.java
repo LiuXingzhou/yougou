@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.islxz.yougou.R;
 import com.islxz.yougou.activity.SecondActivity;
@@ -52,33 +51,45 @@ public class GoodsListFragment extends Fragment {
     }
 
     private void initData(int goods) {
-        switch (goods) {
-            case 1:
-                Toast.makeText(getActivity(), "女装", Toast.LENGTH_SHORT).show();
-                break;
-            case 2:
-                Toast.makeText(getActivity(), "男装", Toast.LENGTH_SHORT).show();
-                break;
-            case 3:
-                Toast.makeText(getActivity(), "童装", Toast.LENGTH_SHORT).show();
-                break;
-        }
         mGoodsList = new ArrayList<>();
         Goods goods1 = new Goods();
         Goods goods2 = new Goods();
         Goods goods3 = new Goods();
-        goods1.setImg(R.drawable.img1);
-        goods2.setImg(R.drawable.img2);
-        goods3.setImg(R.drawable.img1);
-        goods1.setName("时尚白色连衣裙 长袖小白裙 婚礼裙 显瘦公主裙");
-        goods2.setName("夹克男春季青年外套男士 休闲上衣潮流大码 立领男装夹克衫");
-        goods3.setName("粗罗纹开衫 套头衫开衫");
+        switch (goods) {
+            case 1:
+                goods1.setImg(R.drawable.img1);
+                goods2.setImg(R.drawable.img1);
+                goods3.setImg(R.drawable.img1);
+                goods1.setName("时尚白色连衣裙 长袖小白裙 婚礼裙 显瘦公主裙");
+                goods2.setName("时尚白色连衣裙 长袖小白裙 婚礼裙 显瘦公主裙时尚白色连衣裙 长袖小白裙 婚礼裙 显瘦公主裙");
+                goods3.setName("时尚白色连裙");
+                break;
+            case 2:
+                goods1.setImg(R.drawable.img2);
+                goods2.setImg(R.drawable.img2);
+                goods3.setImg(R.drawable.img2);
+                goods1.setName("夹克男春季青年外套男士 休闲上衣");
+                goods2.setName("夹克男春季青年外套男士 休闲上衣潮流大码 立领男装夹克衫");
+                goods3.setName("夹克男春季青年外套男士 休闲上衣潮流大码 立领男装夹克衫 立领男装夹克衫");
+                break;
+            case 3:
+                goods1.setImg(R.drawable.img3);
+                goods2.setImg(R.drawable.img3);
+                goods3.setImg(R.drawable.img3);
+                goods1.setName("时尚白色连衣裙 长袖小白裙 婚礼裙 显瘦公主裙");
+                goods2.setName("夹克男春季青年外套男士 休闲上衣潮流大码 立领男装夹克衫");
+                goods3.setName("粗罗纹开衫 套头衫开衫");
+                break;
+        }
         goods1.setPrice("159");
         goods2.setPrice("189");
         goods3.setPrice("96");
         goods1.setNum("99");
         goods2.setNum("547");
         goods3.setNum("3924");
+        mGoodsList.add(goods1);
+        mGoodsList.add(goods2);
+        mGoodsList.add(goods3);
         mGoodsList.add(goods1);
         mGoodsList.add(goods2);
         mGoodsList.add(goods3);

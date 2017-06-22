@@ -1,11 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@color/background"
-              android:orientation="vertical">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
 
-    <include layout="@layout/action_bar_item1"/>
+    <include
+        android:id="@+id/fg_sc_include"
+        layout="@layout/action_bar_item1"/>
 
+    <ScrollView
+        android:id="@+id/fg_sc_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fg_sc_rl"
+        android:layout_below="@id/fg_sc_include">
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/main_margin2">
+
+            <include layout="@layout/item_shopping_car"/>
+
+            <include layout="@layout/item_shopping_car"/>
+
+            <include layout="@layout/item_shopping_car"/>
+
+            <include layout="@layout/item_shopping_car"/>
+
+            <include layout="@layout/item_shopping_car"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@id/fg_sc_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <CheckBox
+            android:id="@+id/fg_sc_cb_allselect"
+            style="@style/RadioButtonMyIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/main_margin2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/main_margin3"
+            android:layout_toRightOf="@id/fg_sc_cb_allselect"
+            android:text="全选"
+            android:textColor="@color/title_class_1"
+            android:textSize="@dimen/text_size_4"/>
+
+        <Button
+            android:id="@+id/fg_sc_btn"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/main_margin3"
+            android:background="@color/main_color"
+            android:text="结算(3)"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_4"/>
+
+        <TextView
+            android:id="@+id/fg_sc_tv_allprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/fg_sc_btn"
+            android:text="合计：414元"
+            android:textColor="@color/title_class_1"
+            android:textSize="@dimen/text_size_4"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
