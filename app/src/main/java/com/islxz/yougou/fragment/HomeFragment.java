@@ -59,7 +59,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Navi
     private LinearLayout mLinearLayout4;
     private LinearLayout mLinearLayout5;
 
-    private int[] mInts = new int[]{R.drawable.logo_sign_in, R.drawable.img1, R.drawable.img2};
+    private int[] mInts = new int[]{R.drawable.ad_img1, R.drawable.ad_img2, R.drawable.ad_img3};
     private List<View> mViewList;
     private PagerAdapter mPagerAdapter;
 

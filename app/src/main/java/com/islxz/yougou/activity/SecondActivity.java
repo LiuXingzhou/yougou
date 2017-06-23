@@ -203,6 +203,7 @@ public class SecondActivity extends AppCompatActivity {
                 if (mGoodsListFragment == null)
                     mGoodsListFragment = new GoodsListFragment();
                 bundle.putInt("goods", goods);
+                bundle.putInt("goodsid", goods);
                 mGoodsListFragment.setArguments(bundle);
                 mFragmentTransaction.replace(R.id.main_se_fl, mGoodsListFragment);
             }

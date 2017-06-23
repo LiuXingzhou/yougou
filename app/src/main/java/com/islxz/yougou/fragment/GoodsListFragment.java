@@ -33,6 +33,7 @@ public class GoodsListFragment extends Fragment {
     private RecyclerView.ItemDecoration mItemDecoration;
 
     private int goods;
+    private int goodsid;
 
     @Nullable
     @Override
@@ -41,6 +42,7 @@ public class GoodsListFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_goods_list, null);
         Bundle bundle = getArguments();
         goods = bundle.getInt("goods");
+        goodsid = bundle.getInt("goodsid");
         bindID(view);
         mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager
                 .VERTICAL));
@@ -126,7 +128,7 @@ public class GoodsListFragment extends Fragment {
                 @Override
                 public void onClick(View view) {
                     mIntent.putExtra("goods", goods);
-                    mIntent.putExtra("goodsid", 1);
+                    mIntent.putExtra("goodsid", goodsid);
                     getActivity().startActivity(mIntent);
                 }
             });

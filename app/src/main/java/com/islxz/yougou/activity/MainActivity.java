@@ -9,12 +9,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.islxz.yougou.R;
 import com.islxz.yougou.fragment.HomeFragment;
 import com.islxz.yougou.fragment.SignInFragment;
 
 public class MainActivity extends AppCompatActivity {
+
+    private RelativeLayout mRelativeLayout;
 
     private ImageView mImageView;
     private FrameLayout mFrameLayout;
@@ -29,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void handleMessage(Message msg) {
             mImageView.setVisibility(View.GONE);
+            mRelativeLayout.setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
             mFrameLayout.setVisibility(View.VISIBLE);
         }
     };
@@ -42,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         bindID();
         int signin = getIntent().getIntExtra("signin", 0);
         if (signin == 0) {
-
+            mRelativeLayout.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
             new Thread(new Runnable() {
                 @Override
                 public void run() {
@@ -68,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void bindID() {
+        mRelativeLayout = (RelativeLayout) findViewById(R.id.main_content);
         mImageView = (ImageView) findViewById(R.id.mact_iv);
         mFrameLayout = (FrameLayout) findViewById(R.id.mact_fl);
     }
