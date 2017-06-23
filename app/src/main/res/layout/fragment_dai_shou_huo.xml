@@ -13,15 +13,25 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <include layout="@layout/item_dai_shou_huo"/>
+            <include
+                android:id="@+id/fg_dsh_include1"
+                layout="@layout/item_dai_shou_huo"/>
 
-            <include layout="@layout/item_dai_shou_huo"/>
+            <include
+                android:id="@+id/fg_dsh_include2"
+                layout="@layout/item_dai_shou_huo"/>
 
-            <include layout="@layout/item_dai_shou_huo"/>
+            <include
+                android:id="@+id/fg_dsh_include3"
+                layout="@layout/item_dai_shou_huo"/>
 
-            <include layout="@layout/item_dai_shou_huo"/>
+            <include
+                android:id="@+id/fg_dsh_include4"
+                layout="@layout/item_dai_shou_huo"/>
 
-            <include layout="@layout/item_dai_shou_huo"/>
+            <include
+                android:id="@+id/fg_dsh_include5"
+                layout="@layout/item_dai_shou_huo"/>
 
         </LinearLayout>
 

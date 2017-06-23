@@ -191,13 +191,15 @@ public class SecondActivity extends AppCompatActivity {
                     mTitleTV.setText("童装");
                     break;
             }
+            Bundle bundle = new Bundle();
             if (goodsid != 0) {
                 mSearchIB.setImageResource(R.drawable.share);
                 if (mGoodsFragment == null)
                     mGoodsFragment = new GoodsFragment();
+                bundle.putInt("goodsid", goodsid);
+                mGoodsFragment.setArguments(bundle);
                 mFragmentTransaction.replace(R.id.main_se_fl, mGoodsFragment);
             } else {
-                Bundle bundle = new Bundle();
                 if (mGoodsListFragment == null)
                     mGoodsListFragment = new GoodsListFragment();
                 bundle.putInt("goods", goods);
